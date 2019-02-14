@@ -69,6 +69,25 @@ public class ItemGenerator : MonoBehaviour
 
             CreateItems();
         }
+
+        ////各オブジェクトが画面外に出た場合
+        //if (10 < this.unityChan.transform.position.z - this.carPrefab.transform.position.z)
+        //{
+        //    //オブジェクトを破棄
+        //    Destroy(this.carPrefab.gameObject);
+        //}
+
+        //if (10 < this.unityChan.transform.position.z - this.coinPrefab.transform.position.z)
+        //{
+        //    //オブジェクトを破棄
+        //    Destroy(this.coinPrefab.gameObject);
+        //}
+
+        //if (10 < this.unityChan.transform.position.z - this.conePrefab.transform.position.z)
+        //{
+        //    //オブジェクトを破棄
+        //    Destroy(this.conePrefab.gameObject);
+        //}
     }
 
     //UnityChanの前方にアイテムを作る関数

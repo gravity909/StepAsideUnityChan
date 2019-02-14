@@ -22,11 +22,11 @@ public class CoinController : MonoBehaviour
         //回転
         this.transform.Rotate(0, 3, 0);
 
-        //オブジェクトが画面外に出た場合
-        if (10 < this.unityChan.transform.position.z - this.transform.position.z)
-        {
-            //オブジェクトを破棄
-            Destroy(this.gameObject);
-        }
+        ////オブジェクトが画面外に出た場合
+        //if (10 < this.unityChan.transform.position.z - this.transform.position.z)
+        //{
+        //    //オブジェクトを破棄
+        //    Destroy(this.gameObject);
+        //}
     }
 }
