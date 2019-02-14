@@ -17,49 +17,34 @@ public class ItemGenerator : MonoBehaviour
     //アイテムを出すx方向の範囲
     private float posRange = 3.4f;
 
-    //　次に敵が出現するまでの時間
-    private float appearNextTime = 3;
-    //　待ち時間計測フィールド
-    private float elapsedTime;
+    //　アイテム生成場所
+    private float appearPlace = -160;
+   
 
     // Use this for initialization
     void Start()
     {
         //シーン中のunityChanオブジェクトを取得
         this.unityChan = GameObject.Find("unitychan");
-        for (int i = 0; i <= 50; i += 15)
-        {
+       
             CreateItems();
-        }
-
-        elapsedTime = 0f;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //距離カウンター
-        if (-159 > this.unityChan.transform.position.z && -160 < this.unityChan.transform.position.z)
-        {
-            CreateItems();
-        }
-        //距離カウンター
-        if (-109 > this.unityChan.transform.position.z && -110 < this.unityChan.transform.position.z)
-        {
-            CreateItems();
-        }
-        //距離カウンター
-        if (-59 > this.unityChan.transform.position.z && -60 < this.unityChan.transform.position.z)
-        {
-            CreateItems();
-        }
-        //距離カウンター
-        if (-9 > this.unityChan.transform.position.z && -10 < this.unityChan.transform.position.z)
-        {
-            CreateItems();
-        }
 
+        if (goalPos > this.unityChan.transform.position.z + 100)
+        { 
+            //距離カウンター
+            if (this.unityChan.transform.position.z > appearPlace)
+            {
+              CreateItems();
 
+              appearPlace += 50;
+            }
+        }
     }
 
     //UnityChanの前方にアイテムを作る関数
