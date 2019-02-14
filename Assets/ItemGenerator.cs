@@ -38,56 +38,28 @@ public class ItemGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ////距離カウンター
-        //if (-159 > this.unityChan.transform.position.z && -160 < this.unityChan.transform.position.z)
-        //{
-        //    CreateItems();
-        //}
-        ////距離カウンター
-        //if (-109 > this.unityChan.transform.position.z && -110 < this.unityChan.transform.position.z)
-        //{
-        //    CreateItems();
-        //}
-        ////距離カウンター
-        //if (-59 > this.unityChan.transform.position.z && -60 < this.unityChan.transform.position.z)
-        //{
-        //    CreateItems();
-        //}
-        ////距離カウンター
-        //if (-9 > this.unityChan.transform.position.z && -10 < this.unityChan.transform.position.z)
-        //{
-        //    CreateItems();
-        //}
-
-        //　経過時間を足す
-        elapsedTime += Time.deltaTime;
-
-        //経過時間が経ったら
-        if (elapsedTime > appearNextTime)
+        //距離カウンター
+        if (-159 > this.unityChan.transform.position.z && -160 < this.unityChan.transform.position.z)
         {
-            elapsedTime = 0f;
-
+            CreateItems();
+        }
+        //距離カウンター
+        if (-109 > this.unityChan.transform.position.z && -110 < this.unityChan.transform.position.z)
+        {
+            CreateItems();
+        }
+        //距離カウンター
+        if (-59 > this.unityChan.transform.position.z && -60 < this.unityChan.transform.position.z)
+        {
+            CreateItems();
+        }
+        //距離カウンター
+        if (-9 > this.unityChan.transform.position.z && -10 < this.unityChan.transform.position.z)
+        {
             CreateItems();
         }
 
-        ////各オブジェクトが画面外に出た場合
-        //if (10 < this.unityChan.transform.position.z - this.carPrefab.transform.position.z)
-        //{
-        //    //オブジェクトを破棄
-        //    Destroy(this.carPrefab.gameObject);
-        //}
 
-        //if (10 < this.unityChan.transform.position.z - this.coinPrefab.transform.position.z)
-        //{
-        //    //オブジェクトを破棄
-        //    Destroy(this.coinPrefab.gameObject);
-        //}
-
-        //if (10 < this.unityChan.transform.position.z - this.conePrefab.transform.position.z)
-        //{
-        //    //オブジェクトを破棄
-        //    Destroy(this.conePrefab.gameObject);
-        //}
     }
 
     //UnityChanの前方にアイテムを作る関数

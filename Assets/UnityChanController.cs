@@ -63,18 +63,6 @@ public class UnityChanController : MonoBehaviour
         //シーン中のscoreTextオブジェクトを取得（追加）
         this.scoreText = GameObject.Find("ScoreText");
 
-        //シーン中のCarPrefabオブジェクトを取得（追加）
-        this.carPrefab = GameObject.Find("CarPrefab");
-
-        //シーン中のCarPrefabオブジェクトを取得（追加）
-        this.coinPrefab = GameObject.Find("CoinPrefab");
-
-        //シーン中のCarPrefabオブジェクトを取得（追加）
-        this.conePrefab = GameObject.Find("TrafficConePrefab");
-
-        //シーン中のCarPrefabオブジェクトを取得（追加）
-        this.unityChan = GameObject.Find("unitychan");
-
 
     }
 
@@ -134,24 +122,6 @@ public class UnityChanController : MonoBehaviour
             //this.myRigidbody.AddForce(0, this.upForce, 0);
         }
 
-        //各オブジェクトが画面外に出た場合
-        if (10 < this.unityChan.transform.position.z - this.carPrefab.transform.position.z)
-        {
-            //オブジェクトを破棄
-            Destroy(this.carPrefab.gameObject);
-        }
-
-        if (10 < this.unityChan.transform.position.z - this.coinPrefab.transform.position.z)
-        {
-            //オブジェクトを破棄
-            Destroy(this.coinPrefab.gameObject);
-        }
-
-        if (10 < this.unityChan.transform.position.z - this.conePrefab.transform.position.z)
-        {
-            //オブジェクトを破棄
-            Destroy(this.conePrefab.gameObject);
-        }
 
     }
 
