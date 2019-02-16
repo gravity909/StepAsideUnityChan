@@ -42,7 +42,7 @@ public class ItemGenerator : MonoBehaviour
             {
               CreateItems();
 
-              appearPlace += 50;
+              appearPlace += 15;
             }
         }
     }
@@ -50,7 +50,7 @@ public class ItemGenerator : MonoBehaviour
     //UnityChanの前方にアイテムを作る関数
     void CreateItems()
     {
-        for (float i = this.unityChan.transform.position.z + 50; i < this.unityChan.transform.position.z + 100; i += 15)
+        for (float i = this.unityChan.transform.position.z + 35; i < this.unityChan.transform.position.z + 50; i += 15)
         {
             //どのアイテムを出すのかをランダムに設定
             int num = Random.Range(1, 11);
